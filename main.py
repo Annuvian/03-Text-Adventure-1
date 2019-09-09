@@ -10,6 +10,22 @@ logger = logging.getLogger(__name__)
 
 
 
+def render(world, current_location):
+    ''' Print out a description of the current location '''
+    room = world[current_location]
+    print(room['name'])
+    print(room['desc'])
+    return True
+
+def check_input():
+    ''' Request input from the layer, validate the input '''
+    user_input = input("What would you like to do?")
+    # do we want to validate
+    return user_input
+
+def update():
+    ''' Check if we need to move to a new location '''
+    return True
 
 def main():
     game = {}
@@ -19,6 +35,15 @@ def main():
 
     current = 'WHOUS'
 
+
+    quit = False
+    while not quit:
+        #render the world
+        render(game["rooms"],current)
+        #Check for input
+        user_input = check_input()
+        #Update state of the world
+        
 
     return True
 

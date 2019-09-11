@@ -23,9 +23,15 @@ def check_input():
     # do we want to validate
     return user_input
 
-def update():
+def update(world, current, selection):
     ''' Check if we need to move to a new location '''
-    return True
+    game[current]['exits']
+    for e in game['rooms'][current]['exits']:
+        if e['verb'] == selection:
+            if e['target'] = 'NoExit':
+                print('fuck you')
+            current = ('target')
+    return current
 
 def main():
     game = {}

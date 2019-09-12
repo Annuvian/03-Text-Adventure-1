@@ -9,70 +9,361 @@
         "map": "QUIT"
       },
       {
-        "v": "NORTH",
-        "map": "NORTH"
+        "v": "CLOSET",
+        "map": "CLOSET"
       },
       {
-        "v": "N",
-        "map": "NORTH"
+        "v": "C",
+        "map": "CLOSET"
       },
       {
-        "v": "SOUTH",
-        "map": "SOUTH"
+        "v": "DESK",
+        "map": "DESK"
       },
       {
-        "v": "S",
-        "map": "SOUTH"
+        "v": "D",
+        "map": "DESK"
       },
       {
-        "v": "EAST",
-        "map": "EAST"
+        "v": "BATHROOM",
+        "map": "BATHROOM"
+      },
+      {
+        "v": "B",
+        "map": "BATHROOM"
+      },
+      {
+        "v": "ENDTABLE",
+        "map": "ENDTABLE"
       },
       {
         "v": "E",
-        "map": "EAST"
+        "map": "ENDTABLE"
       },
       {
-        "v": "WEST",
-        "map": "WEST"
+        "v": "BEDROOM",
+        "map": "BEDROOM"
       },
       {
-        "v": "W",
-        "map": "WEST"
+        "v": "B",
+        "map": "BEDROOM"
+      },
+      {
+        "v": "SINK",
+        "map": "SINK"
+      },
+      {
+        "v": "SI",
+        "map": "SINK"
+      },
+      {
+        "v": "MIRROR",
+        "map": "MIRROR"
+      },
+      {
+        "v": "M",
+        "map": "MIRROR"
+      },
+      {
+        "v": "TOILET",
+        "map": "TOILET"
+      },
+      {
+        "v": "T",
+        "map": "TOILET"
+      },
+      {
+        "v": "SHOWER",
+        "map": "SHOWER"
+      },
+      {
+        "v": "SH",
+        "map": "SHOWER"
       }
     ],
     "rooms": {
       "START": {
-        "name": "Starting place",
-        "desc": "This is the place to start!",
+        "name": "BED",
+        "desc": "The light from the window blinds you when you attempt to open your eyes, your head swimming. After a few minutes,\nyour eyes focus on your room.  You need to get ready for the day.",
         "exits": [
           {
-            "verb": "NORTH",
-            "target": "LOC2",
+            "verb": "CLOSET",
+            "target": "CLOSET",
             "condition": ""
           },
           {
-            "verb": "SOUTH",
-            "target": "LOC32",
+            "verb": "DESK",
+            "target": "DESK",
             "condition": ""
           },
           {
-            "verb": "WEST",
-            "target": "LOC2",
+            "verb": "BATHROOM",
+            "target": "BATHROOM",
             "condition": ""
           },
           {
-            "verb": "EAST",
-            "target": "LOC2",
+            "verb": "ENDTABLE",
+            "target": "ENDTABLE",
             "condition": ""
           }
         ],
         "inventory": []
       },
-      "LOC2": {
-        "name": "Location 2",
-        "desc": "Here is the second location.",
+      "CLOSET": {
+        "name": "front of the CLOSET",
+        "desc": "The doors are painted white and covered in stickers.",
         "exits": [
+          {
+            "verb": "DESK",
+            "target": "DESK",
+            "condition": ""
+          },
+          {
+            "verb": "BATHROOM",
+            "target": "BATHROOM",
+            "condition": ""
+          },
+          {
+            "verb": "ENDTABLE",
+            "target": "ENDTABLE",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "DESK": {
+        "name": "front of the DESK",
+        "desc": "Papers are scattered across it's surface.  You think there might be something under them, but you can't remember\n what...",
+        "exits": [
+          {
+            "verb": "CLOSET",
+            "target": "CLOSET",
+            "condition": ""
+          },
+          {
+            "verb": "BATHROOM",
+            "target": "BATHROOM",
+            "condition": ""
+          },
+          {
+            "verb": "ENDTABLE",
+            "target": "ENDTABLE",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "BATHROOM": {
+        "name": "the BATHROOM",
+        "desc": "Clothes are scattered on the floor.",
+        "exits": [
+          {
+            "verb": "BEDROOM",
+            "target": "BEDROOM",
+            "condition": ""
+          },
+          {
+            "verb": "SINK",
+            "target": "SINK",
+            "condition": ""
+          },
+          {
+            "verb": "MIRROR",
+            "target": "MIRROR",
+            "condition": ""
+          },
+          {
+            "verb": "TOILET",
+            "target": "TOILET",
+            "condition": ""
+          },
+          {
+            "verb": "SHOWER",
+            "target": "SHOWER",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "BEDROOM": {
+        "name": "the BEDROOM",
+        "desc": "Clothes are scattered on the floor.",
+        "exits": [
+          {
+            "verb": "BEDROOM",
+            "target": "BEDROOM",
+            "condition": ""
+          },
+          {
+            "verb": "SINK",
+            "target": "SINK",
+            "condition": ""
+          },
+          {
+            "verb": "MIRROR",
+            "target": "MIRROR",
+            "condition": ""
+          },
+          {
+            "verb": "TOILET",
+            "target": "TOILET",
+            "condition": ""
+          },
+          {
+            "verb": "SHOWER",
+            "target": "SHOWER",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "SINK": {
+        "name": "the SINK",
+        "desc": "Clothes are scattered on the floor.",
+        "exits": [
+          {
+            "verb": "BEDROOM",
+            "target": "BEDROOM",
+            "condition": ""
+          },
+          {
+            "verb": "SINK",
+            "target": "SINK",
+            "condition": ""
+          },
+          {
+            "verb": "MIRROR",
+            "target": "MIRROR",
+            "condition": ""
+          },
+          {
+            "verb": "TOILET",
+            "target": "TOILET",
+            "condition": ""
+          },
+          {
+            "verb": "SHOWER",
+            "target": "SHOWER",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "MIRROR": {
+        "name": "the MIRROR",
+        "desc": "Clothes are scattered on the floor.",
+        "exits": [
+          {
+            "verb": "BEDROOM",
+            "target": "BEDROOM",
+            "condition": ""
+          },
+          {
+            "verb": "SINK",
+            "target": "SINK",
+            "condition": ""
+          },
+          {
+            "verb": "MIRROR",
+            "target": "MIRROR",
+            "condition": ""
+          },
+          {
+            "verb": "TOILET",
+            "target": "TOILET",
+            "condition": ""
+          },
+          {
+            "verb": "SHOWER",
+            "target": "SHOWER",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "TOILET": {
+        "name": "the TOILET",
+        "desc": "Clothes are scattered on the floor.",
+        "exits": [
+          {
+            "verb": "BEDROOM",
+            "target": "BEDROOM",
+            "condition": ""
+          },
+          {
+            "verb": "SINK",
+            "target": "SINK",
+            "condition": ""
+          },
+          {
+            "verb": "MIRROR",
+            "target": "MIRROR",
+            "condition": ""
+          },
+          {
+            "verb": "TOILET",
+            "target": "TOILET",
+            "condition": ""
+          },
+          {
+            "verb": "SHOWER",
+            "target": "SHOWER",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "SHOWER": {
+        "name": "the SHOWER",
+        "desc": "Clothes are scattered on the floor.",
+        "exits": [
+          {
+            "verb": "BEDROOM",
+            "target": "BEDROOM",
+            "condition": ""
+          },
+          {
+            "verb": "SINK",
+            "target": "SINK",
+            "condition": ""
+          },
+          {
+            "verb": "MIRROR",
+            "target": "MIRROR",
+            "condition": ""
+          },
+          {
+            "verb": "TOILET",
+            "target": "TOILET",
+            "condition": ""
+          },
+          {
+            "verb": "SHOWER",
+            "target": "SHOWER",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "ENDTABLE": {
+        "name": "front of the ENDTABLE",
+        "desc": "Old glasses of water, a lamp, and your phone.  A classic set-up.",
+        "exits": [
+          {
+            "verb": "DESK",
+            "target": "DESK",
+            "condition": ""
+          },
+          {
+            "verb": "BATHROOM",
+            "target": "BATHROOM",
+            "condition": ""
+          },
+          {
+            "verb": "CLOSET",
+            "target": "CLOSET",
+            "condition": ""
+          }
         ],
         "inventory": []
       }

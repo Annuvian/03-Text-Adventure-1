@@ -37,6 +37,18 @@
         "map": "ENDTABLE"
       },
       {
+        "v": "PHONE",
+        "map": "PHONE"
+      },
+      {
+        "v": "CALLS",
+        "map": "CALLS"
+      },
+      {
+        "v": "TEXTS",
+        "map": "TEXTS"
+      },
+      {
         "v": "BEDROOM",
         "map": "BEDROOM"
       },
@@ -47,6 +59,22 @@
       {
         "v": "MIRROR",
         "map": "MIRROR"
+      },
+      {
+        "v": "INVESTIGATE",
+        "map": "INVESTIGATE"
+      },
+      {
+        "v": "TOSS",
+        "map": "TOSS"
+      },
+      {
+        "v": "KEEP",
+        "map": "KEEP"
+      },
+      {
+        "v": "USE",
+        "map": "USE"
       },
       {
         "v": "TOILET",
@@ -164,8 +192,8 @@
         "inventory": []
       },
       "DESK": {
-        "name": "front of the DESK",
-        "desc": "Papers are scattered across it's surface.  You think there might be something under them, but you can't remember\n what...",
+        "name": "You are in front of the DESK",
+        "desc": "Papers are scattered across the surface.",
         "exits": [
           {
             "verb": "CLOSET",
@@ -178,6 +206,82 @@
             "condition": ""
           },
           {
+            "verb": "INVESTIGATE",
+            "target": "INVESTIGATE",
+            "condition": ""
+          },
+          {
+            "verb": "ENDTABLE",
+            "target": "ENDTABLE",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "INVESTIGATE": {
+        "name": "You INVESTIGATE the DESK",
+        "desc": "You shuffle the papers to the side and find the polaroid underneath.  It's one of you and your gir- well, I guess she's\nan EX-girlfriend now.  What do you do with the picture?",
+        "exits": [
+          {
+            "verb": "TOSS",
+            "target": "TOSS",
+            "condition": ""
+          },
+          {
+            "verb": "KEEP",
+            "target": "KEEP",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "TOSS": {
+        "name": "You TOSS the POLAROID",
+        "desc": "Like a band-aid.  Thats what they say, right?  No point in keeping around an old picture.",
+        "exits": [
+          {
+            "verb": "CLOSET",
+            "target": "CLOSET",
+            "condition": ""
+          },
+          {
+            "verb": "BATHROOM",
+            "target": "BATHROOM",
+            "condition": ""
+          },
+          {
+            "verb": "INVESTIGATE",
+            "target": "INVESTIGATE",
+            "condition": ""
+          },
+          {
+            "verb": "ENDTABLE",
+            "target": "ENDTABLE",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "KEEP": {
+        "name": "You KEEP the POLAROID",
+        "desc": "You can't bring yourself to throw it away just yet.  It hasn't even been 24 hours yet.  You place it back on the desk.",
+        "exits": [
+          {
+            "verb": "CLOSET",
+            "target": "CLOSET",
+            "condition": ""
+          },
+          {
+            "verb": "BATHROOM",
+            "target": "BATHROOM",
+            "condition": ""
+          },
+          {
+            "verb": "INVESTIGATE",
+            "target": "INVESTIGATE",
+            "condition": ""
+          },
+          {
             "verb": "ENDTABLE",
             "target": "ENDTABLE",
             "condition": ""
@@ -187,7 +291,7 @@
       },
       "BATHROOM": {
         "name": "You are in the BATHROOM",
-        "desc": "Clothes are scattered on the floor.",
+        "desc": "Clothes are scattered on the floor.  You really need to clean this place up.",
         "exits": [
           {
             "verb": "BEDROOM",
@@ -218,8 +322,8 @@
         "inventory": []
       },
       "BEDROOM": {
-        "name": "the BEDROOM",
-        "desc": "Clothes are scattered on the floor.",
+        "name": "You are in the BEDROOM",
+        "desc": "This place is messier than you remember it being yesterday.  Must have been looing for something last night.",
         "exits": [
           {
             "verb": "CLOSET",
@@ -287,8 +391,8 @@
         "inventory": []
       },
       "MIRROR": {
-        "name": "the MIRROR",
-        "desc": "Clothes are scattered on the floor.",
+        "name": "You look at the MIRROR",
+        "desc": "Probably the cleanest thing in the room.  Could still use a wipe down.",
         "exits": [
           {
             "verb": "BEDROOM",
@@ -324,8 +428,8 @@
         "inventory": []
       },
       "TOILET": {
-        "name": "the TOILET",
-        "desc": "Clothes are scattered on the floor.",
+        "name": "You look at the TOILET",
+        "desc": "The toilet paper will need replaced soon.",
         "exits": [
           {
             "verb": "BEDROOM",
@@ -343,8 +447,35 @@
             "condition": ""
           },
           {
-            "verb": "TOILET",
-            "target": "TOILET",
+            "verb": "USE",
+            "target": "USE",
+            "condition": ""
+          },
+          {
+            "verb": "SHOWER",
+            "target": "SHOWER",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "USE": {
+        "name": "You successfully USE the TOILET",
+        "desc": "That's a little relief.",
+        "exits": [
+          {
+            "verb": "BEDROOM",
+            "target": "BEDROOM",
+            "condition": ""
+          },
+          {
+            "verb": "SINK",
+            "target": "SINK",
+            "condition": ""
+          },
+          {
+            "verb": "MIRROR",
+            "target": "MIRROR",
             "condition": ""
           },
           {
@@ -388,8 +519,121 @@
         ],
         "inventory": []
       },
+      "ENDTABLE": {
+        "name": "You next to the ENDTABLE",
+        "desc": "A few cups of old water and your phone.  A standard endtable set up.",
+        "exits": [
+          {
+            "verb": "CLOSET",
+            "target": "CLOSET",
+            "condition": ""
+          },
+          {
+            "verb": "DESK",
+            "target": "DESK",
+            "condition": ""
+          },
+          {
+            "verb": "BATHROOM",
+            "target": "BATHROOM",
+            "condition": ""
+          },
+          {
+            "verb": "PHONE",
+            "target": "PHONE",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "PHONE": {
+        "name": "You pick up your PHONE",
+        "desc": "You phone's background brings tears to your eyes.  You still can't believe she dumped you.",
+        "exits": [
+          {
+            "verb": "CLOSET",
+            "target": "CLOSET",
+            "condition": ""
+          },
+          {
+            "verb": "DESK",
+            "target": "DESK",
+            "condition": ""
+          },
+          {
+            "verb": "BATHROOM",
+            "target": "BATHROOM",
+            "condition": ""
+          },
+          {
+            "verb": "CALLS",
+            "target": "CALLS",
+            "condition": ""
+          },
+          {
+            "verb": "TEXTS",
+            "target": "TEXTS",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "CALLS": {
+        "name": "You open your CALL HISTORY",
+        "desc": "Wait... DID YOU DRUNK DIAL HER LAST NIGHT???",
+        "exits": [
+          {
+            "verb": "CLOSET",
+            "target": "CLOSET",
+            "condition": ""
+          },
+          {
+            "verb": "DESK",
+            "target": "DESK",
+            "condition": ""
+          },
+          {
+            "verb": "BATHROOM",
+            "target": "BATHROOM",
+            "condition": ""
+          },
+          {
+            "verb": "TEXTS",
+            "target": "TEXTS",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "TEXTS": {
+        "name": "You open your MESSENGER",
+        "desc": "The last message from her is displayed, since you never responded.  That's one of the worst parts of this whole break-up.\nWho dumps someone through text anymore?",
+        "exits": [
+          {
+            "verb": "CLOSET",
+            "target": "CLOSET",
+            "condition": ""
+          },
+          {
+            "verb": "DESK",
+            "target": "DESK",
+            "condition": ""
+          },
+          {
+            "verb": "BATHROOM",
+            "target": "BATHROOM",
+            "condition": ""
+          },
+          {
+            "verb": "CALLS",
+            "target": "CALLS",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
       "END": {
-        "name": "You FINISHED",
+        "name": "You finished GETTING READY.",
         "desc": "",
         "exits": [
         

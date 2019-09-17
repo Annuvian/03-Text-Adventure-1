@@ -65,7 +65,7 @@ def update(selection,game,current,inventory):
     elif current == "SINK" and s == "MEDS":
         if len(inventory) == 2:
             inventory.append("TOOK MEDS")
-            print("You successfully TOOK your MEDS\n Take that, depression and anxiety!")
+            print("You successfully TOOK your MEDS\n Take that, depression and anxiety!  You throw in a tylenol for good measure.")
         elif len(inventory) == 0:
             print("\nUgh, you're too distracted by how gross you feel.  Should probably shower first.")
         elif len(inventory) == 1:

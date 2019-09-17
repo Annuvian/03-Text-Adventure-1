@@ -9,19 +9,23 @@
         "map": "QUIT"
       },
       {
+        "v": "END",
+        "map": "END"
+      },
+      {
+        "v": "STAND",
+        "map": "STAND"
+      },
+      {
         "v": "CLOSET",
         "map": "CLOSET"
       },
       {
-        "v": "C",
-        "map": "CLOSET"
+        "v": "OPEN",
+        "map": "OPEN"
       },
       {
         "v": "DESK",
-        "map": "DESK"
-      },
-      {
-        "v": "D",
         "map": "DESK"
       },
       {
@@ -29,15 +33,7 @@
         "map": "BATHROOM"
       },
       {
-        "v": "B",
-        "map": "BATHROOM"
-      },
-      {
         "v": "ENDTABLE",
-        "map": "ENDTABLE"
-      },
-      {
-        "v": "E",
         "map": "ENDTABLE"
       },
       {
@@ -45,15 +41,7 @@
         "map": "BEDROOM"
       },
       {
-        "v": "B",
-        "map": "BEDROOM"
-      },
-      {
         "v": "SINK",
-        "map": "SINK"
-      },
-      {
-        "v": "SI",
         "map": "SINK"
       },
       {
@@ -61,15 +49,7 @@
         "map": "MIRROR"
       },
       {
-        "v": "M",
-        "map": "MIRROR"
-      },
-      {
         "v": "TOILET",
-        "map": "TOILET"
-      },
-      {
-        "v": "T",
         "map": "TOILET"
       },
       {
@@ -77,14 +57,50 @@
         "map": "SHOWER"
       },
       {
-        "v": "SH",
-        "map": "SHOWER"
+        "v": "BATHE",
+        "map": "BATHE"
+      },
+      {
+        "v": "TEETH",
+        "map": "TEETH"
+      },
+      {
+        "v": "MEDS",
+        "map": "MEDS"
+      },
+      {
+        "v": "FACE",
+        "map": "FACE"
+      },
+      {
+        "v": "MAKEUP",
+        "map": "MAKEUP"
+      },
+      {
+        "v": "HAIR",
+        "map": "HAIR"
+      },
+      {
+        "v": "DRESS",
+        "map": "DRESS"
       }
     ],
     "rooms": {
       "START": {
-        "name": "BED",
+        "name": "You are in BED",
         "desc": "The light from the window blinds you when you attempt to open your eyes, your head swimming. After a few minutes,\nyour eyes focus on your room.  You need to get ready for the day.",
+        "exits": [
+          {
+            "verb": "STAND",
+            "target": "STAND",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "STAND": {
+        "name": "You are next to the BED",
+        "desc": "You manage to pull youself out of bed, but just barely.  You squint around your room, trying to re-orient yourself.",
         "exits": [
           {
             "verb": "CLOSET",
@@ -110,10 +126,14 @@
         "inventory": []
       },
       "CLOSET": {
-        "name": "front of the CLOSET",
+        "name": "You are in front of the CLOSET",
         "desc": "The doors are painted white and covered in stickers.",
         "exits": [
           {
+            "verb": "OPEN",
+            "target": "OPEN",
+            "condition": ""
+          },{
             "verb": "DESK",
             "target": "DESK",
             "condition": ""
@@ -126,6 +146,18 @@
           {
             "verb": "ENDTABLE",
             "target": "ENDTABLE",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "OPEN": {
+        "name": "You are in front of the OPEN CLOSET",
+        "desc": "Only about 7% of the clothes that are supposed to be hung up are actually hung up.\nYou should clean one of these days.",
+        "exits": [
+          {
+            "verb": "GET DRESSED",
+            "target": "DRESSED",
             "condition": ""
           }
         ],
@@ -154,7 +186,7 @@
         "inventory": []
       },
       "BATHROOM": {
-        "name": "the BATHROOM",
+        "name": "You are in the BATHROOM",
         "desc": "Clothes are scattered on the floor.",
         "exits": [
           {
@@ -190,36 +222,31 @@
         "desc": "Clothes are scattered on the floor.",
         "exits": [
           {
-            "verb": "BEDROOM",
-            "target": "BEDROOM",
+            "verb": "CLOSET",
+            "target": "CLOSET",
             "condition": ""
           },
           {
-            "verb": "SINK",
-            "target": "SINK",
+            "verb": "DESK",
+            "target": "DESK",
             "condition": ""
           },
           {
-            "verb": "MIRROR",
-            "target": "MIRROR",
+            "verb": "BATHROOM",
+            "target": "BATHROOM",
             "condition": ""
           },
           {
-            "verb": "TOILET",
-            "target": "TOILET",
-            "condition": ""
-          },
-          {
-            "verb": "SHOWER",
-            "target": "SHOWER",
+            "verb": "ENDTABLE",
+            "target": "ENDTABLE",
             "condition": ""
           }
         ],
         "inventory": []
       },
       "SINK": {
-        "name": "the SINK",
-        "desc": "Clothes are scattered on the floor.",
+        "name": "You are in front of the SINK",
+        "desc": "Your toothbrush and paste are in their holders, with your face wash on the other side of the sink,\nnext to your medicine.",
         "exits": [
           {
             "verb": "BEDROOM",
@@ -227,8 +254,18 @@
             "condition": ""
           },
           {
-            "verb": "SINK",
-            "target": "SINK",
+            "verb": "TEETH",
+            "target": "TEETH",
+            "condition": ""
+          },
+          {
+            "verb": "FACE",
+            "target": "FACE",
+            "condition": ""
+          },
+          {
+            "verb": "MEDS",
+            "target": "MEDS",
             "condition": ""
           },
           {
@@ -264,8 +301,13 @@
             "condition": ""
           },
           {
-            "verb": "MIRROR",
-            "target": "MIRROR",
+            "verb": "MAKEUP",
+            "target": "MAKEUP",
+            "condition": ""
+          },
+          {
+            "verb": "HAIR",
+            "target": "HAIR",
             "condition": ""
           },
           {
@@ -314,8 +356,8 @@
         "inventory": []
       },
       "SHOWER": {
-        "name": "the SHOWER",
-        "desc": "Clothes are scattered on the floor.",
+        "name": "You are near the SHOWER",
+        "desc": "You see your assortment of shampoos and soaps around the ring of the tub.",
         "exits": [
           {
             "verb": "BEDROOM",
@@ -333,37 +375,24 @@
             "condition": ""
           },
           {
+            "verb": "BATHE",
+            "target": "BATHE",
+            "condition": ""
+          },
+          {
             "verb": "TOILET",
             "target": "TOILET",
             "condition": ""
-          },
-          {
-            "verb": "SHOWER",
-            "target": "SHOWER",
-            "condition": ""
           }
+
         ],
         "inventory": []
       },
-      "ENDTABLE": {
-        "name": "front of the ENDTABLE",
-        "desc": "Old glasses of water, a lamp, and your phone.  A classic set-up.",
+      "END": {
+        "name": "You FINISHED",
+        "desc": "",
         "exits": [
-          {
-            "verb": "DESK",
-            "target": "DESK",
-            "condition": ""
-          },
-          {
-            "verb": "BATHROOM",
-            "target": "BATHROOM",
-            "condition": ""
-          },
-          {
-            "verb": "CLOSET",
-            "target": "CLOSET",
-            "condition": ""
-          }
+        
         ],
         "inventory": []
       }

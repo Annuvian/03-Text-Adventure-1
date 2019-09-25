@@ -7,31 +7,35 @@ Peer's repository: https://github.com/stldavids/03-Text-adventure.git
 
 What is something you learned by reviewing your peer's project?
 
+That compared to their game mine was very boring.
  
 
 What is something you saw in your peer's project that you would like to apply to your own programming projects?
 
+I liked the humor in it.
  
 
 What suggestions would you have for your peer to improve his/her code?
 
- 
+The only small suggestion I would have is allowing for some more verbs or ways to word things, or at least
+offer some like options from the player to pick from so at least have a small hint of what valid commands are.
 
 What could have been clearer or better commented?
 
- 
+I don't think comments were necessary for this particular assignment
 
 Was there anything in the code that was confusing to you? If so, what?
 
- 
+Nope, it all looked good and made sense and was well thought out and organized.
 
 Does the repository contain an appropriate LICENSE?
 
- 
+ Yes it does.
 
 What is something he/she could add to the README.md to make it more descriptive?
 
- 
+ The README file looks good and is a good description of the game.
 
 Pay a compliment to your peer based on the quality of his/her code.
 
+The game was fun and entertaining. I liked the humor in it. Code was well written and functioned correctly.

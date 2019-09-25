@@ -30,11 +30,11 @@ Nope, it all looked good and made sense and was well thought out and organized.
 
 Does the repository contain an appropriate LICENSE?
 
- 
+ Yes it does.
 
 What is something he/she could add to the README.md to make it more descriptive?
 
- 
+ The README file looks good and is a good description of the game.
 
 Pay a compliment to your peer based on the quality of his/her code.
 
